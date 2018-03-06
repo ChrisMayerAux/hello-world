@@ -1,6 +1,6 @@
 
 dbZiel --> datenbank der vorhandenen bilder
-tabelle heißt 'Dateien'
+tabelle heiÃŸt 'Dateien'
 
 * String			UNCPfad				\\192.168.177.210\Bilder\2016.05\2016.05.10.13.55.55.254.jpg
 * String			Dateiname			2016.05.10.13.55.55.254.jpg
@@ -12,12 +12,12 @@ Field6
 
 
 
-db2 --> temporäre Datei
-tabelle heißt 'Temp'
+db2 --> temporÃ¤re Datei
+tabelle heiÃŸt 'Temp'
 
 * String			UNCPfad			\\192.168.177.210\Bilder\2016.05\2016.05.10.13.55.55.254.jpg
 * String			Dateiname_alt			DSB237.jpg
-* String			Prüfsumme			5dfs186sdf186we5f13sdf
+* String			PrÃ¼fsumme			5dfs186sdf186we5f13sdf
 * String			Field5
 * String			Field6
 * String			Field7
@@ -28,14 +28,12 @@ tabelle heißt 'Temp'
 * boolean			neu				true / false
 
 
-
-
 EXIF DateTimeOriginal umgewandelt:   2012.05.01.16.08.11
 EXIF DateTimeDigitized umgewandelt:   2012.05.01.16.08.11
 Image DateTime umgewandelt:   2012.05.01.16.08.11
 Zeitstempel des letzten Zugriffs auf das Objekt (atime): 1491812712 Zeit umgewandelt: -->  2017.04.10.10.25.12
-Zeitstempel der letzten Änderung des Objekts (mtime): 1335881290 Zeit umgewandelt: -->  2012.05.01.16.08.10
-Zeitstempel der letzten Änderung der Metadaten des Objekts (ctime): 1490013452 Zeit umgewandelt: -->  2017.03.20.13.37.32
-Größe des Objekts in Bytes: 1239601
+Zeitstempel der letzten Ã„nderung des Objekts (mtime): 1335881290 Zeit umgewandelt: -->  2012.05.01.16.08.10
+Zeitstempel der letzten Ã„nderung der Metadaten des Objekts (ctime): 1490013452 Zeit umgewandelt: -->  2017.03.20.13.37.32
+GrÃ¶ÃŸe des Objekts in Bytes: 1239601
 BildBreite:   2560
-Bildhöhe:   1920
+BildhÃ¶he:   1920
