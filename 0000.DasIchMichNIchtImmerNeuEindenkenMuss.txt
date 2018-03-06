@@ -1,0 +1,74 @@
+
+
+Problem:
+wenn ich mich jedes mal, wenn ich hier anfange, neu eindenken muss ist des wahnsinnig stressig.
+
+es läuft folgendermaßen:
+
+zur initialisierung läuft das script 
+	-> 0901.DatenbankInitialisierenOhneDubletten.ZielDB
+welches die bilder aus dem zielordner in die datenbank ZielDB schreibt. sollten dubletten auftreten, werden diese in die datenbank "DublettenInitialisierung.db" geschrieben.
+
+
+dann läuft das script, welches die neuen bilder kopiert und in die DB schreibt.
+	-> 1000.NeueBilderVerarbeiten.py
+
+	(leert die temp db?)
+	schreibt die bilder aus dem quellpfad ohne dubletten in die tempdb
+	
+	anschließend werden alle datensätze der tempDB gegen die zielDB gecheckt und die nicht vorhandenen werden kopiert
+
+	kopieren: alle dati werden ausgelesen (und in zielDB hinterlegt, genau wie ein paar andere daten), das älteste wird zum dateinamen
+	
+	"ein paar andere daten": 
+
+
+
+	
+	
+
+installation der pakete:
+	
+python -m pip install C:\01CM\204_ProgrammiertesPython\Snippets\ExifRead-2.1.2.tar.gz
+python -m pip install C:\01CM\204_ProgrammiertesPython\Snippets\md5hash-0.0.2\md5hash0.0.2.tar.gz	
+
+
+
+
+************************ was mir eingefallen ist und was ich gern noch umsetzen würde: ****************************
+
+
+-> pfade: sollten aus einer datei gelesen werden.
+	--> moduldatei, aus der jedes mal wenn pfade gebraucht werden, diese gelesen werden. fertig. 
+	--> keine übergebenen pfade mehr!
+
+
+-> klassen?
+--> alle dateien die ausführbar sein sollten:
+	-> kategorisiert nach 
+		
+		modul_	für module in denen funktionen stecken
+		
+		tool_	für werkzeuge
+		
+		prog_	für programme, die dann mit cron jobs gestartet werden.
+        
+        test_   für programmteile, die laufen und in die jeweiligen programme eingebaut werden.
+                wenn sie laufen sind sie mit OK zu kennzeichnen.
+		
+        Programmbeschreibung: textdateien, in denen die verschiedenen programmteile beschrieben werden
+				schwierig, immer gleich nachzuziehen, wenn was wie wann wo geändert wrid - mal sehen.
+				aber um nachzuvollziehen was grundsätzlich gemacht wird ...
+		
+			
+		
+	-> desweiteren sprechende namen
+			_DBTempLöschen o.ä.
+			
+-> sicherungen mit datum eftl. uhrzeit versehen und in sicherungsordner schmeißen.
+
+-> tägliche sicherung als zip!
+
+-> logging!?
+
+	

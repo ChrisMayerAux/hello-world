@@ -1,0 +1,2 @@
+Quellpfad=C:\temp\quelle
+Zielpfad=C:\temp\ziel
