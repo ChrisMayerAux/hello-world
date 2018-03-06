@@ -1,15 +1,15 @@
 
-Grundsätzlich: bitte alles in deutsch schreiben, also nicht path oder ähnliches. sich diesen style angewöhnen und treu bleiben!
+GrundsÃ¤tzlich: bitte alles in deutsch schreiben, also nicht path oder Ã¤hnliches. sich diesen style angewÃ¶hnen und treu bleiben!
 
 anderes konzept, bzw. tieferes konzept (mit db tabellenbeschreibung)
 
 
 dbZiel --> datenbank der vorhandenen bilder
-tabelle heißt 'Dateien'
+tabelle heiÃŸt 'Dateien'
 
 * String			UNCPfad				\\192.168.177.210\Bilder\2016.05\2016.05.10.13.55.55.254.jpg
 * String			Dateiname			2016.05.10.13.55.55.254.jpg
-* String			Prüfsumme			5dfs186sdf186we5f13sdf
+* String			PrÃ¼fsumme			5dfs186sdf186we5f13sdf
 
 * String			EXIF DateTimeOriginal		Datum1
 * String			EXIF DateTimeDigitized		Datum2
@@ -20,19 +20,19 @@ tabelle heißt 'Dateien'
 * String			3. SpeicherDatumDatei		Datum4
 
 * String			EXIF ExifImageWidth			BildBreite
-* String			EXIF ExifImageLength		BildLänge
+* String			EXIF ExifImageLength		BildLÃ¤nge
 
 * String			status bild					neu / vorhanden / weg / None,Empty,"",leer (was auch immer)
 * String			Field7
 
 
 
-db2 --> temporäre Datei
-tabelle heißt 'Temp'
+db2 --> temporÃ¤re Datei
+tabelle heiÃŸt 'Temp'
 
 * String			UNCPfad				\\192.168.177.210\Bilder\2016.05\DSB237.jpg
 * String			Dateiname_alt			DSB237.jpg
-* String			Prüfsumme			5dfs186sdf186we5f13sdf
+* String			PrÃ¼fsumme			5dfs186sdf186we5f13sdf
 
 * String			EXIF DateTimeOriginal		Datum1
 * String			EXIF DateTimeDigitized		Datum2
@@ -43,7 +43,7 @@ tabelle heißt 'Temp'
 * String			3. SpeicherDatumDatei		Datum4
 
 * String			EXIF ExifImageWidth			BildBreite
-* String			EXIF ExifImageLength		BildLänge
+* String			EXIF ExifImageLength		BildLÃ¤nge
 
 * String			status bild					neu / vorhanden / weg / None,Empty,"",leer (was auch immer)
 * String			Field7
@@ -72,36 +72,36 @@ detailierteres KOnzept ab 2017.04.13:
 im Programm enthaltene funktionen hier:
 
 ERLEDIGT!
-- Ordner Prüfen und erstellen
-		Ordner mit YYYY.MM formatierung auf existenz prüfen und ggfs. erstellen
-		Übergabe:	Pfad des zukünftigen Ordners
-		RÜckgabe:	Erfolgreich erledigt als boolean
+- Ordner PrÃ¼fen und erstellen
+		Ordner mit YYYY.MM formatierung auf existenz prÃ¼fen und ggfs. erstellen
+		Ãœbergabe:	Pfad des zukÃ¼nftigen Ordners
+		RÃœckgabe:	Erfolgreich erledigt als boolean
 		
 		gespeichert in: 
 		00.OrdnerPruefenUndErstellen.py
 
 ERLEDIGT!
 - dateienAuslesen 
-		In einem Ornder befindliche Dateien auslesen und als Array zurückgeben
-		Übergabe: Pfad des Ordners
-		Rückgabe: Array mit dateien
+		In einem Ornder befindliche Dateien auslesen und als Array zurÃ¼ckgeben
+		Ãœbergabe: Pfad des Ordners
+		RÃ¼ckgabe: Array mit dateien
 		
 		01.DateienAuslesen.py
 		
 ERLEDIGT!		
-- PrüfsummeBerechnen
-		Berechnung der Prüfsumme anhand einer Datei
-		Übergabe Datei mit Pfad
-		Rückgabe: Prüfsumme
+- PrÃ¼fsummeBerechnen
+		Berechnung der PrÃ¼fsumme anhand einer Datei
+		Ãœbergabe Datei mit Pfad
+		RÃ¼ckgabe: PrÃ¼fsumme
 
 		gespeichert in: 
 		03.PruefsummeBerechnen.py			
 		
-	
+ERLEDIGT!	
 	- ausDatenbankLesen
-		Aus der datenbank lesen - ist die datei mit der prüfsumme vorhanden:
-		1. lesen		Übergabe: DatenbankDatei mit Pfad, Prüfsumme
-						Rückgabe: Boolean
+		Aus der datenbank lesen - ist die datei mit der prÃ¼fsumme vorhanden:
+		1. lesen		Ãœbergabe: DatenbankDatei mit Pfad, PrÃ¼fsumme
+						RÃ¼ckgabe: Boolean
 
 		gespeichert in: 
 		04.AusDatenbankLesen.py			
@@ -109,8 +109,8 @@ ERLEDIGT!
 ERLEDIGT!
 	- inDatenbankSchreiben 
 		In die datenbank schreiben - schreibe den datensatz in die datenbank
-		2. schreiben	Übergabe: DatenbankDatei mit Pfad, Datensatz
-						Rückgabe: Boolean
+		2. schreiben	Ãœbergabe: DatenbankDatei mit Pfad, Datensatz
+						RÃ¼ckgabe: Boolean
 
 		gespeichert in: 
 		05.InDatenbankSchreiben.py			
@@ -118,30 +118,30 @@ ERLEDIGT!
 		
 ERLEDIGT!		
 	- Datei kopieren und umbenennen 
-		übergabe: 	Quellpfad der zu kopierenden Datei
+		Ã¼bergabe: 	Quellpfad der zu kopierenden Datei
 					Alter Name der Datei
 					Zielpfad der neuen Datei
 					Neuer Name der Datei
 	
-		RÜckgabe:	Erfolgreich erledigt als boolean
+		RÃœckgabe:	Erfolgreich erledigt als boolean
 	
 		gespeichert in: 
 		07.DateiKopierenUndUmbenennen.py			
 ERLEDIGT!
 					
 	- Exif Daten lesen
-		Exif daten aus einer bilddatei lesen und das datum zurückgeben
-		Übergabe:	Datei mit pfad	
-		Rückgabe:	datum
+		Exif daten aus einer bilddatei lesen und das datum zurÃ¼ckgeben
+		Ãœbergabe:	Datei mit pfad	
+		RÃ¼ckgabe:	datum
 
 		gespeichert in: 
 		08.ExifDatenLesen.py
 		
 ERLEDIGT!
-	- Ältestes Datum Finden, das in der datei gespeichert wurde.
-		Datum aus erstellungsdatum, änderungsdatum, exif datum finden und zurückgeben
-		Übergabe:	Datei mit pfad
-		Rückgabe:	Datum
+	- Ã„ltestes Datum Finden, das in der datei gespeichert wurde.
+		Datum aus erstellungsdatum, Ã¤nderungsdatum, exif datum finden und zurÃ¼ckgeben
+		Ãœbergabe:	Datei mit pfad
+		RÃ¼ckgabe:	Datum
 
 		gespeichert in: 
 		09.AeltestesDatumFinden.py			
@@ -149,9 +149,9 @@ ERLEDIGT!
 		
 ERLEDIGT!
 	- iniDateiLesen
-		Quell- und Zielpfad aus der ini Datei lesen und zurückgeben
-		Übergabe:	Stichwort
-		Rückgabe:	Entsprechender String
+		Quell- und Zielpfad aus der ini Datei lesen und zurÃ¼ckgeben
+		Ãœbergabe:	Stichwort
+		RÃ¼ckgabe:	Entsprechender String
 
 		gespeichert in: 
 		11.IniDateiLesen.py			
@@ -159,17 +159,17 @@ ERLEDIGT!
 ERLEDIGT!		
 	- PfadeAuslesen	
 		Pfade auslesen und rekursiv nach weiteren pfaden durchsuchen
-		Übergabe:	Quellpfad
-		Rückgabe:	array mit pfaden
+		Ãœbergabe:	Quellpfad
+		RÃ¼ckgabe:	array mit pfaden
 					
 		gespeichert in: 
 		12.PfadeAuslesen.py			
 
-		
+in Arbeit		
 	- datei verkleinern
 		- ImageMagickx86 sollte ja implementierbar sein.
-		Übergabe: 	datei mit pfad, neuer dateipfad
-		RÜckgabe:	Erfolgreich erledigt als boolean
+		Ãœbergabe: 	datei mit pfad, neuer dateipfad
+		RÃœckgabe:	Erfolgreich erledigt als boolean
 
 		gespeichert in: 
 		10.DateiVerkleinern.py	
@@ -178,10 +178,10 @@ ERLEDIGT!
 
 --> brauch mer erst mal nicht <--
 		
-- Dateiexistenz Prüfen
-		Datei auf existenz prüfen (ggfs. unnötig)
-		Übergabe: Datei mit pfad
-		Rückgabe: Boolean
+- Dateiexistenz PrÃ¼fen
+		Datei auf existenz prÃ¼fen (ggfs. unnÃ¶tig)
+		Ãœbergabe: Datei mit pfad
+		RÃ¼ckgabe: Boolean
 		
 		gespeichert in: 
 		02.DateiexistenzPruefen.py
@@ -190,8 +190,8 @@ ERLEDIGT!
 		
 	- Datenbank sichern
 		Sichern der Datenbank durch kopieren
-		Übergabe:	Datenbankpfad, Sicherungspfad
-		rückgabe:	erfolgreich erledigt als boolean
+		Ãœbergabe:	Datenbankpfad, Sicherungspfad
+		rÃ¼ckgabe:	erfolgreich erledigt als boolean
 
 		gespeichert in: 
 		06.DatenbankSichern.py		
@@ -221,58 +221,58 @@ ostern: doch nciht so ;)
 				-> speichern 
 				-> bild kopieren
 				-> bild umbenennen
-				-> flac löschen
+				-> flac lÃ¶schen
 			-> falls vorhanden 
 			
 		case: vorhanden			
-			-> flac löschen
+			-> flac lÃ¶schen
 
 		case: leer
-			-> datensatz aus temp db löschen
+			-> datensatz aus temp db lÃ¶schen
 
 #******************************************************************************************************************
 
 alt:
 (vor ostern 2017.04.13:)
 	erst mal muss eine datenbank (dbZiel)gebaut werden, welche die dateien im zielordner beinhaltet. 
-	diese datenbank wird von zeit zu zeit gesichert, bzw. verifiziert. möglich sind hier 2 stufen - die erste mit die 2. ohne Prüfsummenberechnung.
+	diese datenbank wird von zeit zu zeit gesichert, bzw. verifiziert. mÃ¶glich sind hier 2 stufen - die erste mit die 2. ohne PrÃ¼fsummenberechnung.
 	
 	von dieser db gehen wir aus.
 	
-	jeden tag um 23.00 uhr läuft ein programm, das 
-		- checkt, ob ein neuer monat ist und wenn ja, den ordner für den neuen monat anlegt (z.b. 2017.03)
+	jeden tag um 23.00 uhr lÃ¤uft ein programm, das 
+		- checkt, ob ein neuer monat ist und wenn ja, den ordner fÃ¼r den neuen monat anlegt (z.b. 2017.03)
 		- die dateien im quellordner liest und in die quellDB schreibt, 
-		- dann den dateien in der quellDB eine prüfsumme hinzufügt,
-		- dann die quellDB gegen die ZielDB checkt, also die im zielsystem vorhandenen dateien aus der db löscht.
+		- dann den dateien in der quellDB eine prÃ¼fsumme hinzufÃ¼gt,
+		- dann die quellDB gegen die ZielDB checkt, also die im zielsystem vorhandenen dateien aus der db lÃ¶scht.
 		- dann die dateien aus der quellDB umbenennt und kopiert
 		- dann die dateien verkleinert und in ein neues ordnerkonstrukt kopiert (mal sehen)
 
 		
 hier die auflistung der tasks mit entsprechenden programmen
-	jeden tag um 23.00 uhr läuft ein programm, das 
+	jeden tag um 23.00 uhr lÃ¤uft ein programm, das 
 -----
-	- checkt, ob ein neuer monat ist und wenn ja, den ordner für den neuen monat anlegt (z.b. 2017.03)
-			- Ordner Prüfen und erstellen
+	- checkt, ob ein neuer monat ist und wenn ja, den ordner fÃ¼r den neuen monat anlegt (z.b. 2017.03)
+			- Ordner PrÃ¼fen und erstellen
 			
 -----	1011	
 		- die dateien im quellordner liest und in die quellDB schreibt,
 			- iniDateiLesen
 			- PfadeAuslesen
 			- dateienAuslesen 
-			- PrüfsummeBerechnen
+			- PrÃ¼fsummeBerechnen
 			- DatenbankSchreiben
 
 -----	1011	
 
-		- dann den dateien in der quellDB eine prüfsumme hinzufügt,
+		- dann den dateien in der quellDB eine prÃ¼fsumme hinzufÃ¼gt,
 			- DatenbankLesen
-			- PrüfsummeBerechnen
+			- PrÃ¼fsummeBerechnen
 			- DatenbankSchreiben
 		
 			
 -----	
 
-		- dann die quellDB gegen die ZielDB checkt, also die im zielsystem vorhandenen dateien aus der db löscht.
+		- dann die quellDB gegen die ZielDB checkt, also die im zielsystem vorhandenen dateien aus der db lÃ¶scht.
 			- DatenbankLesen
 			- DatenbankSchreiben		
 			
@@ -280,7 +280,7 @@ hier die auflistung der tasks mit entsprechenden programmen
 
 		- dann die dateien aus der quellDB umbenennt und kopiert
 			- Exif Daten lesen
-			- Ältestes Datum Finden, das in der datei gespeichert wurde.
+			- Ã„ltestes Datum Finden, das in der datei gespeichert wurde.
 			- Datei kopieren und umbenennen
 			
 -----		
@@ -298,21 +298,21 @@ hier die auflistung der tasks mit entsprechenden programmen
 
 'alte texte:
 //boa ey:
-	dateien auf existenz prüfen und ggfs. entfernen
+	dateien auf existenz prÃ¼fen und ggfs. entfernen
  	--> status: DB aktuell
 
 	alle Ordner, die in einer ini datei gespeichert werden, auslesen und dateien in array schreiben
-		- Prüfsummen erstellen
+		- PrÃ¼fsummen erstellen
 		- exif datum auslesen
-	--> status: array mit datenätzen wie DB2 von ordnern in ini
+	--> status: array mit datenÃ¤tzen wie DB2 von ordnern in ini
 	
-	datensätze vergleichen
-	- alle datensätze die in db2 vorhanden werden aus array entfernt
-	- restliche datensätze mit status NEU in DB2 schreiben
-	-> status: db2 mit neuen datensätzen vorhanden
+	datensÃ¤tze vergleichen
+	- alle datensÃ¤tze die in db2 vorhanden werden aus array entfernt
+	- restliche datensÃ¤tze mit status NEU in DB2 schreiben
+	-> status: db2 mit neuen datensÃ¤tzen vorhanden
 
 	neue daten verarbeiten
-	-> alles datensätze mit neu auslesen 
+	-> alles datensÃ¤tze mit neu auslesen 
 	-> datei kopieren, umbenennen und verschieben
 		
 boa ey://
@@ -350,17 +350,17 @@ monatsersten um 00:01 Uhr
 	-> Zielordner (ablageordner) erstellen (jahr.monat)									erledigt			-->		001
 
 
-ein mal früh um 3	
+ein mal frÃ¼h um 3	
 -> erste verarbeitung
 	-> quell und zielordner aus datei lesen												erledigt			-->		002
-	-> dateien aus quellordner lesen und pfade in datei schreiben 			Transfer über datei?			
-	-> Prüfsumme der Datei errechnen 
-	-> PrüfsummenDatei aufmachen und Werte lesen
-	-> vorher errechnete prüfsumme mit ergebnis aus datei vergleichen und 
-		-> vorhanden: prüfsumme wegschmeißen und datei in Dubletten verschieben
-		-> nicht vorhanden: datei in den weiterverarbeitungsordner kopieren und prüfsumme in prüfsummendatei schreiben
+	-> dateien aus quellordner lesen und pfade in datei schreiben 			Transfer Ã¼ber datei?			
+	-> PrÃ¼fsumme der Datei errechnen 
+	-> PrÃ¼fsummenDatei aufmachen und Werte lesen
+	-> vorher errechnete prÃ¼fsumme mit ergebnis aus datei vergleichen und 
+		-> vorhanden: prÃ¼fsumme wegschmeiÃŸen und datei in Dubletten verschieben
+		-> nicht vorhanden: datei in den weiterverarbeitungsordner kopieren und prÃ¼fsumme in prÃ¼fsummendatei schreiben
 
-ein mal früh um 4		
+ein mal frÃ¼h um 4		
 -> weiterverarbeitung
 	-> datei aus weiterverarbeitungsordner lesen
 	-> daten ermitteln und neuen namen kreieren
