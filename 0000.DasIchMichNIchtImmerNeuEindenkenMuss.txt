@@ -3,71 +3,63 @@
 Problem:
 wenn ich mich jedes mal, wenn ich hier anfange, neu eindenken muss ist des wahnsinnig stressig.
 
-es läuft folgendermaßen:
+es lÃ¤uft folgendermaÃŸen:
 
-zur initialisierung läuft das script 
+zur initialisierung lÃ¤uft das script 
 	-> 0901.DatenbankInitialisierenOhneDubletten.ZielDB
 welches die bilder aus dem zielordner in die datenbank ZielDB schreibt. sollten dubletten auftreten, werden diese in die datenbank "DublettenInitialisierung.db" geschrieben.
 
 
-dann läuft das script, welches die neuen bilder kopiert und in die DB schreibt.
+dann lÃ¤uft das script, welches die neuen bilder kopiert und in die DB schreibt.
 	-> 1000.NeueBilderVerarbeiten.py
 
 	(leert die temp db?)
 	schreibt die bilder aus dem quellpfad ohne dubletten in die tempdb
 	
-	anschließend werden alle datensätze der tempDB gegen die zielDB gecheckt und die nicht vorhandenen werden kopiert
+	anschlieÃŸend werden alle datensÃ¤tze der tempDB gegen die zielDB gecheckt und die nicht vorhandenen werden kopiert
 
-	kopieren: alle dati werden ausgelesen (und in zielDB hinterlegt, genau wie ein paar andere daten), das älteste wird zum dateinamen
+	kopieren: alle dati werden ausgelesen (und in zielDB hinterlegt, genau wie ein paar andere daten), das Ã¤lteste wird zum dateinamen
 	
 	"ein paar andere daten": 
 
 
 
-	
-	
-
 installation der pakete:
-	
-python -m pip install C:\01CM\204_ProgrammiertesPython\Snippets\ExifRead-2.1.2.tar.gz
-python -m pip install C:\01CM\204_ProgrammiertesPython\Snippets\md5hash-0.0.2\md5hash0.0.2.tar.gz	
+-> direkte installation der pakete, weil ich im gschÃ¤ft net durch die FW komm ;) 
+python -m pip install 	..\Snippets\ExifRead-2.1.2.tar.gz
+python -m pip install 	..\Snippets\md5hash-0.0.2\md5hash0.0.2.tar.gz	
 
 
 
+************************ was mir eingefallen ist und was ich gern noch umsetzen wÃ¼rde: ****************************
 
-************************ was mir eingefallen ist und was ich gern noch umsetzen würde: ****************************
-
-
+erledigt
 -> pfade: sollten aus einer datei gelesen werden.
 	--> moduldatei, aus der jedes mal wenn pfade gebraucht werden, diese gelesen werden. fertig. 
-	--> keine übergebenen pfade mehr!
+	--> keine Ã¼bergebenen pfade mehr!
 
-
+in arbeit
 -> klassen?
---> alle dateien die ausführbar sein sollten:
+--> alle dateien die ausfÃ¼hrbar sein sollten:
 	-> kategorisiert nach 
 		
-		modul_	für module in denen funktionen stecken
-		
-		tool_	für werkzeuge
-		
-		prog_	für programme, die dann mit cron jobs gestartet werden.
+		modul_	fÃ¼r module in denen funktionen stecken
+		tool_	fÃ¼r werkzeuge
+		prog_	fÃ¼r programme, die dann mit cron jobs gestartet werden.
         
-        test_   für programmteile, die laufen und in die jeweiligen programme eingebaut werden.
+        test_   fÃ¼r programmteile, die laufen und in die jeweiligen programme eingebaut werden.
                 wenn sie laufen sind sie mit OK zu kennzeichnen.
 		
         Programmbeschreibung: textdateien, in denen die verschiedenen programmteile beschrieben werden
-				schwierig, immer gleich nachzuziehen, wenn was wie wann wo geändert wrid - mal sehen.
-				aber um nachzuvollziehen was grundsätzlich gemacht wird ...
-		
-			
+				schwierig, immer gleich nachzuziehen, wenn was wie wann wo geÃ¤ndert wrid - mal sehen.
+				aber um nachzuvollziehen was grundsÃ¤tzlich gemacht wird ...
 		
 	-> desweiteren sprechende namen
-			_DBTempLöschen o.ä.
+			_DBTempLÃ¶schen o.Ã¤.
 			
--> sicherungen mit datum eftl. uhrzeit versehen und in sicherungsordner schmeißen.
+-> sicherungen mit datum eftl. uhrzeit versehen und in sicherungsordner schmeiÃŸen.
 
--> tägliche sicherung als zip!
+-> tÃ¤gliche sicherung als zip!
 
 -> logging!?
 
